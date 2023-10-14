@@ -29,7 +29,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,children:[
-      {index:true,element: <RouterProtector><Home/></RouterProtector> },
+      {path:'home',element: <RouterProtector><Home/></RouterProtector> },
       {path:'',element:<RouterProtector><Home/></RouterProtector> },
       {path:'signup',element:<SignUp/>},
       {path:'Categories',element:<RouterProtector><Categories/></RouterProtector> },
