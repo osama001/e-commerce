@@ -53,7 +53,7 @@ font-family: 'Work Sans', sans-serif;
   color: black;
 }
 .forgetPass:hover{
-color: var(--main-color) !important;
+color: rgb(51, 203, 51) !important;
 }
 .bg-main{
   background-color: var(--main-color);
