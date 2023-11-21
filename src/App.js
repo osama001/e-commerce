@@ -1,6 +1,6 @@
 
 import './App.css';
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Layout from './components/Layout/Layout';
@@ -25,7 +25,7 @@ import Checkout from './components/CheckOutSession/Checkout';
 import Allorders from './components/allorders/Allorders';
 
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
   {
     path: "/",
     element: <Layout />,children:[

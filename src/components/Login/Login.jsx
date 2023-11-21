@@ -58,7 +58,7 @@ export default function Login() {
                 <title>Login </title>
                 
             </Helmet>
-    <h3>Register now </h3>
+    <h3>Login now </h3>
      <div>
       
         <form onSubmit={formik.handleSubmit}>
@@ -79,7 +79,7 @@ export default function Login() {
         </form>
      </div>
       
-           <span className=' forgetPass me-auto d-block text-black'><Link to={'/ForgetPassword'} className='text-decoration-none forgetPass '> forget password ...!</Link></span>
+           <span className=' forgetPass me-auto d-block text-black'><Link to={'/ForgetPassword'} className='text-decoration-none forgetPass '> forgot password ...!</Link></span>
   </div>
     
 

@@ -1,10 +1,11 @@
 import React, { useContext, useEffect,useState } from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/freshcart-logo.svg";
 import { TokenContext } from "../../context/tokenContext";
 import { cartContext } from "../../context/cartContext";
 import { useQuery } from "react-query";
+import './Navbar.module.css'
 
 export default function Navbar() {
  
@@ -36,9 +37,9 @@ console.log()
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <Link to="/">
+          <NavLink to="/">
             <img src={logo} alt="" className="navbar-brand navbar-expand " />
-          </Link>
+          </NavLink>
           <div
             className="collapse navbar-collapse  d-md-flex justify-content-around "
             id="navbarTogglerDemo01"
@@ -46,34 +47,34 @@ console.log()
             {token ? (
               <ul className="navbar-nav     mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                  <NavLink className="nav-NavLink active" aria-current="page" to="/">
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/carts">
+                  <NavLink className="nav-Link" to="/carts">
                     cart
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/WishList">
+                  <NavLink className="nav-Link" to="/WishList">
                     wish list
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Products">
+                  <NavLink className="nav-Link" to="/Products">
                     Products
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Categories">
+                  <NavLink className="nav-Link" to="/Categories">
                     Categories
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Brands">
+                  <NavLink className="nav-Link" to="/Brands">
                     brands
-                  </Link>
+                  </NavLink>
                 </li>
 
               
@@ -86,18 +87,18 @@ console.log()
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <div className=" d-flex justify-content-around">
                   <li className="nav-item">
-                    <Link
-                      className="nav-link active "
+                    <NavLink
+                      className="nav-Link  "
                       aria-current="page"
                       to="/signup"
                     >
                       Register
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/login">
+                    <NavLink className="nav-Link" to="/login">
                       Login
-                    </Link>
+                    </NavLink>
                   </li>
                 </div>
               </ul>
@@ -105,10 +106,10 @@ console.log()
               <div className="d-flex justify-content-between">
                 {" "}
                   
-                  <Link className="nav-link mx-3 " aria-current="page" to="/carts">
+                  <NavLink className="nav-NavLink mx-3 " aria-current="page" to="/carts">
              
                     <i className="fa-solid fa-cart-shopping fa-xl">{userCart?.data?.numOfCartItems} </i>
-                  </Link>
+                  </NavLink>
                 
                 <span className="cursorPointer" onClick={logOut}>
                   log out
