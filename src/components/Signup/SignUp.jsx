@@ -46,13 +46,13 @@ export default function SignUp() {
     phone: yup
       .string()
       .required("pls enter your phone ")
-      .matches(/^01[0125][0-9]{8}$/, "enter a valid phone number pls "),
+      .matches(/^01[0125][0-9]{8}$/, "enter a valid phone number please "),
     password: yup
       .string()
       .required("Please Enter your password")
       .matches(
         /^[A-z][a-z0-9]{4,}$/,
-        "pls enter min 4 char one of them Capital"
+        "please enter min 4 char one of them Capital"
       ),
     rePassword: yup
       .string()
@@ -130,7 +130,7 @@ export default function SignUp() {
             )}
           </div>
           <div className="mb-3">
-            <label htmlFor="rePassword">rePassword:</label>
+            <label htmlFor="rePassword">confirm password:</label>
             <input
               type="password"
               id="rePassword"
@@ -171,7 +171,7 @@ export default function SignUp() {
             <button
               type="submit"
               className="btn btn-success d-block ms-auto"
-              disabled={!(formik.isValid && formik.dirty)}
+              
             >
               register now
             </button>
